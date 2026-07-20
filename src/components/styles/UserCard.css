@@ -1,16 +1,19 @@
 .user-card{
     background-color: white;
+    border: 1px solid;
     border-radius: 5px;
     border-color: black;
-    border-width: 10pt;
     padding-bottom: 20px;
     padding-top: 20px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 5px;
+    padding-right: 5px;
     width:30%;
     align-self: center;
     margin-top: 5%;
 }
 .user-card-name{
     color: black;
+    border-bottom: 1px solid;
+    border-color: grey;
+    padding-bottom: 2%;
 }
