@@ -8,12 +8,12 @@ interface TaskCardProps{
 }
 export function TaskCard({text, completed, onToggle , onDelete}: TaskCardProps){
     return(
-        <div>
-            <p>
-                {text}
-                {completed ? ' ✅' : ' ❎'}
-            </p>
-            <div><Button label="delete" onClick={onDelete}></Button><Button label="toggle" onClick={onToggle}></Button></div>
+        <div>    
+            {completed ? <s>{text} ✅</s> : <p>{text} ❎</p>}
+            <div>
+                <Button label="delete" onClick={onDelete}></Button>
+                <Button label="toggle" onClick={onToggle}></Button>
+            </div>
         </div>
     )
 }
