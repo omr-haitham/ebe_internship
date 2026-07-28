@@ -1,0 +1,13 @@
+.dark{
+    background-color: rgb(9,9,9);
+    color: rgb(200,200,200);
+}
+
+.light{
+    background-color: rgb(200,200,200) ;
+    color: rgb(9,9,9);
+}
+
+.Dashboard{
+    padding:2%
+}
