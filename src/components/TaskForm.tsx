@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Button } from "./Button";
+import "./styles/TaskForm.css"
 
 interface TaskFormProps{
     onAddTask:(x:string)=>void;
@@ -18,7 +19,7 @@ export function TaskForm({onAddTask}:TaskFormProps){
     setText('');
   }
     return (
-        <div>
+        <div className="taskForm">
             <label htmlFor='taskInput'>Task input feild</label>
             <input type="text" name="taskInput" id="taskInput" onBlur={handleInputevent} onSubmit={handleSubmitevent} placeholder={text}></input>
             <Button primary="primary" onClick={()=>{onAddTask(text); clearInputField() }} label="submit"></Button>
