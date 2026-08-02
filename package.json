@@ -10,10 +10,17 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@hookform/resolvers": "^5.7.1",
+    "@mui/material": "^9.2.0",
+    "@mui/styled-engine-sc": "^9.1.1",
     "@types/react-router-dom": "^5.3.3",
+    "axios": "^1.19.0",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
-    "react-router-dom": "^7.18.1"
+    "react-hook-form": "^7.84.0",
+    "react-router-dom": "^7.18.1",
+    "styled-components": "^6.4.4",
+    "zod": "^4.4.3"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
