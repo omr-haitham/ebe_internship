@@ -9,5 +9,16 @@
 }
 
 .Dashboard{
-    padding:2%
+    display:flex;
+    padding:2%;
+    justify-content: space-between;
+    align-content: center;
+    flex-direction: row;
+    
+}
+
+.themer{
+    width: fit-content;
+    order:3;
+    flex-basis: auto;
 }

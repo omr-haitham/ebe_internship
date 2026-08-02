@@ -1,0 +1,13 @@
+.taskBoard{
+    order:2;
+    flex-basis: auto;
+    width: fit-content;
+    align-items: center;
+    align-content: center;
+}
+.title{
+    align-self: center;
+    order:2;
+    flex-basis: auto;
+    width: 100px;
+}

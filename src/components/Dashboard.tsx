@@ -13,8 +13,10 @@ export function Dashboard({children}:DashboardPropsTypes){
     
     return (
         <div className={`Dashboard ${theme}`}>
-            <p>Current theme= {theme}</p>
-            <ThemeButton theme={theme} toggleTheme={toggleTheme}/>    
+            <div className="themer">
+                <p>Current theme= {theme}</p>
+                <ThemeButton theme={theme} toggleTheme={toggleTheme}/>    
+            </div>
             {children}
         </div>
     )

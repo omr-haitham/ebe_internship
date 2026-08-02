@@ -1,0 +1,12 @@
+.taskCard{
+    border-radius: 5px;
+    align-items: center;
+    padding: 3px;
+    background-color: white;
+    border:1px;
+    margin: 2px;
+}
+
+.completed{
+    background-color: aqua;
+}

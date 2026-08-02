@@ -1,4 +1,5 @@
 import { Button } from "./Button"
+import "./styles/TaskCard.css"
 
 interface TaskCardProps{
     text : string,
@@ -8,7 +9,7 @@ interface TaskCardProps{
 }
 export function TaskCard({text, completed, onToggle , onDelete}: TaskCardProps){
     return(
-        <div>    
+        <div className={`taskCard ${completed? "completed":''}`}>    
             {completed ? <s>{text} ✅</s> : <p>{text} ❎</p>}
             <div>
                 <Button label="delete" onClick={onDelete}></Button>
