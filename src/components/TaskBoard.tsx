@@ -8,7 +8,7 @@ import { useTasks } from "../context/task/useTasks";
 export function TaskBoard(){
     
     const {tasks , tasksDispatch} = useTasks();
-    const onAddTask = (text:string)=>{tasksDispatch({type:"ADD_TASK", payload:text});}
+    const onAddTask = (text:string)=>{tasksDispatch({type:"ADD_TASK", payload:{name:text}});}
 
     
     return(
