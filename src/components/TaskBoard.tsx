@@ -1,19 +1,24 @@
-import { useReducer } from "react";
-import { TaskReducer } from "../context/TaskReducer";
+
 import { TaskForm } from "./TaskForm";
-import { TaskCard } from "./TaskCard";
+import { Link, Outlet } from "react-router-dom";
+
 import "./styles/TaskBoard.css" 
+import { useTasks } from "../context/task/useTasks";
 
 export function TaskBoard(){
-    const [ tasks , TaskDispatch ] = useReducer(TaskReducer,[]);
-    const onAddTask = (text:string)=>TaskDispatch({type:"ADD_TASK", payload:text})
+    
+    const {tasks , tasksDispatch} = useTasks();
+    const onAddTask = (text:string)=>{tasksDispatch({type:"ADD_TASK", payload:text});}
+
+    
     return(
         <div className="taskBoard">
             <div className="title">TaskBoard</div>
             <TaskForm onAddTask={onAddTask}></TaskForm>
             <ul>
-                {tasks.map((task)=>(<li ><TaskCard text={task.label} completed={task.completed} onDelete={()=>TaskDispatch({type:"DELETE_TASK",id:task.id})} onToggle={()=>TaskDispatch({type:"TOGGLE_TASK",id:task.id})}/></li>))}
+                {tasks.map((task)=>(<li ><Link to={`/tasks/${task.id}`} state={tasks} >task: {task.label}</Link></li>))}
             </ul>
+            <Outlet/>
         </div>
     )
 }
